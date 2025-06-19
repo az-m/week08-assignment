@@ -1,4 +1,5 @@
 import { db } from "@/utils/dbconnection";
+
 export default async function Comments({ postID }) {
   const comments = (
     await db.query(
@@ -6,7 +7,6 @@ export default async function Comments({ postID }) {
       [postID]
     )
   ).rows;
-  console.log(comments);
 
   return (
     <div>
