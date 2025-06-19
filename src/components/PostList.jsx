@@ -1,12 +1,23 @@
 import Link from "next/link";
 import { db } from "@/utils/dbconnection";
 
-export default async function PostList({ sortOrder }) {
-  const posts = (
-    await db.query(
-      `SELECT posts.id, posts.title, categories.name AS category FROM posts JOIN categories ON category_id = categories.id`
-    )
-  ).rows;
+export default async function PostList({ sortOrder, category }) {
+  let posts = [];
+
+  if (category === "all") {
+    posts = (
+      await db.query(
+        `SELECT posts.id, posts.title, categories.name AS category FROM posts JOIN categories ON category_id = categories.id`
+      )
+    ).rows;
+  } else {
+    posts = (
+      await db.query(
+        `SELECT posts.id, posts.title, categories.name AS category FROM posts JOIN categories ON category_id = categories.id WHERE category_id = $1`,
+        [category]
+      )
+    ).rows;
+  }
 
   if (sortOrder === "asc") {
     posts.sort((a, b) => {
@@ -22,7 +33,9 @@ export default async function PostList({ sortOrder }) {
 
   return (
     <div>
-      <Link href={`/posts?sort=${sortOrder}`}>Sort {sortOrder}</Link>
+      <Link href={`/posts?sort=${sortOrder}&cat=${category}`}>
+        Sort {sortOrder}
+      </Link>
       <ul>
         {posts.map((post) => (
           <li key={post.id}>
