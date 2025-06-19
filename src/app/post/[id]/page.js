@@ -1,5 +1,5 @@
-import Link from "next/link";
 import { db } from "@/utils/dbconnection";
+import Comments from "@/components/Comments";
 
 export default async function Post({ params }) {
   const slug = await params;
@@ -12,11 +12,13 @@ export default async function Post({ params }) {
   ).rows[0];
 
   return (
-    <div>
-      <h2>Post {post.id}</h2>
-      <h3>{post.title}</h3>
-      <p>{post.content}</p>
-      <Link href="/posts">Back to posts</Link>
-    </div>
+    <>
+      <div>
+        <h2>Post {post.id}</h2>
+        <h3>{post.title}</h3>
+        <p>{post.content}</p>
+      </div>
+      <Comments postID={post.id} />
+    </>
   );
 }
