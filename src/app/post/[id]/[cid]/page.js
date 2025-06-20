@@ -12,11 +12,13 @@ export default async function EditCommentPage({ params }) {
   ).rows[0];
 
   return (
-    <EditComment
-      postID={slug.id}
-      commentID={comment.id}
-      nameValue={comment.name}
-      contentValue={comment.content}
-    />
+    <section className="flex flex-col justify-self-center gap-2 w-sm md:w-md lg:w-lg xl:w-xl bg-content-panel mt-10 md:rounded-md">
+      <EditComment
+        postID={slug.id}
+        commentID={comment.id}
+        nameValue={comment.name}
+        contentValue={comment.content}
+      />
+    </section>
   );
 }

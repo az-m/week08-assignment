@@ -2,6 +2,7 @@ import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
 import { db } from "@/utils/dbconnection";
 import CommentForm from "./CommentForm";
+import Link from "next/link";
 
 export default function EditComment({
   postID,
@@ -30,13 +31,18 @@ export default function EditComment({
     <>
       <form
         action={handleSaveComment}
-        className="pt-3 pl-4 pr-4 pb-3 border-t border-b border-content-border"
+        className="pt-3 pl-4 pr-4 pb-3 border-b border-content-border"
       >
         <fieldset className="flex flex-col pt-5">
           <legend className="text-sm">Update comment</legend>
           <CommentForm nameValue={nameValue} contentValue={contentValue} />
         </fieldset>
       </form>
+      <p className="p-4">
+        <Link href={`/post/${postID}`} className="hover:text-sky-500">
+          Back to post
+        </Link>
+      </p>
     </>
   );
 }
