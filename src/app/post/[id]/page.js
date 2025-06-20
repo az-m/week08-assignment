@@ -7,20 +7,22 @@ export default async function Post({ params }) {
 
   const post = (
     await db.query(
-      `SELECT posts.id, posts.title, posts.content, categories.name AS category FROM posts JOIN categories ON category_id = categories.id WHERE posts.id = $1`,
+      `SELECT posts.id, posts.title, posts.content, posts.posted_at, categories.name AS category FROM posts JOIN categories ON category_id = categories.id WHERE posts.id = $1`,
       [slug.id]
     )
   ).rows[0];
 
   return (
-    <>
+    <section className="flex flex-col justify-self-center gap-2 max-w-xl bg-content-panel mt-10 md:rounded-md">
       <div>
-        <h2>Post {post.id}</h2>
-        <h3>{post.title}</h3>
-        <p>{post.content}</p>
+        <p className="p-2 border-b border-content-border opacity-80">
+          {post.posted_at.toDateString()}
+        </p>
+        <h2 className="font-bold pt-2 pl-4 pr-4 text-lg">{post.title}</h2>
+        <p className="p-4">{post.content}</p>
       </div>
       <AddCommentForm postID={post.id} />
       <Comments postID={post.id} />
-    </>
+    </section>
   );
 }

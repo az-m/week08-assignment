@@ -19,24 +19,37 @@ export default function AddCommentForm({ postID }) {
   }
   return (
     <>
-      <form action={handleSaveComment}>
-        <fieldset>
-          <label htmlFor="name">Name:</label>
-          <input
-            type="text"
-            name="name"
-            id="name"
-            placeholder="required"
-            required
-          />
+      <form
+        action={handleSaveComment}
+        className="pt-3 pl-4 pr-4 pb-3 border-t border-b border-content-border"
+      >
+        <fieldset className="flex flex-col">
+          <span>
+            <label htmlFor="name">Name:</label>
+            <input
+              type="text"
+              name="name"
+              id="name"
+              placeholder="required"
+              required
+              className="bg-form-input rounded-sm ml-2 p-1"
+            />
+          </span>
           <label htmlFor="content">Your comment:</label>
           <textarea
             name="content"
             id="content"
+            rows="4"
             placeholder="required"
             required
+            className="bg-form-input rounded-sm mb-2 p-1"
           />
-          <button type="submit">Submit</button>
+          <button
+            type="submit"
+            className="border border-sky-500 active:bg-sky-600"
+          >
+            Submit
+          </button>
         </fieldset>
       </form>
     </>
