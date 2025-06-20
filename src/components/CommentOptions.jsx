@@ -45,7 +45,7 @@ export default function CommentOptions({ postID, commentID }) {
             </Link>
           </p>
           <p
-            className="text-red-500 font-semibold hover:cursor-pointer"
+            className="text-red-500 font-semibold hover:cursor-pointer mt-2"
             onClick={handleClickDeleteCheck}
           >
             DELETE

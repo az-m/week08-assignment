@@ -35,11 +35,11 @@ export default async function PostList({ sortOrder, category }) {
     <div className="flex flex-col items-center mt-5">
       <Link
         href={`/posts?sort=${sortOrder}&cat=${category}`}
-        className="border text-center uppercase p-1 hover:text-sky-500"
+        className="border text-foreground-reverse text-center uppercase p-1 hover:text-sky-500"
       >
         {sortOrder}
       </Link>
-      <ul className="mt-5 p-5 bg-content-panel w-sm md:w-md lg:w-lg xl:w-xl">
+      <ul className="mt-5 p-5 bg-content-panel w-sm md:w-md lg:w-lg xl:w-xl md:rounded-md">
         {posts.map((post) => (
           <li
             key={post.id}

@@ -15,6 +15,10 @@ export default function Header() {
         |{" "}
         <Link href="/categories" className="hover:text-sky-500">
           Categories
+        </Link>{" "}
+        |{" "}
+        <Link href="/manage" className="hover:text-sky-500">
+          Manage
         </Link>
       </nav>
     </header>

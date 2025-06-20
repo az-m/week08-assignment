@@ -13,7 +13,9 @@ export default function CommentForm({ nameValue, contentValue }) {
           className="bg-form-input rounded-sm ml-2 p-1"
         />
       </span>
-      <label htmlFor="content">Your comment:</label>
+      <label htmlFor="content" className="mt-2">
+        Your comment:
+      </label>
       <textarea
         name="content"
         id="content"
