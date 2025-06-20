@@ -13,7 +13,7 @@ export default function CommentOptions({ postID, commentID }) {
     } else setShowOptions("hidden");
   }
 
-  function handleClickDelete() {
+  function handleClickDeleteCheck() {
     if (showDelete === "hidden") {
       setShowDelete("block");
     }
@@ -35,7 +35,7 @@ export default function CommentOptions({ postID, commentID }) {
         </p>
       </div>
       <div className={showOptions}>
-        <div className="bg-zinc-950 relative -top-10 -left-10 p-2">
+        <div className="bg-neutral-700 relative -top-10 -left-10 pt-2 pb-2 pl-4 pr-4 text-foreground-reverse">
           <p>
             <Link
               href={`/post/${postID}/${commentID}`}
@@ -46,19 +46,24 @@ export default function CommentOptions({ postID, commentID }) {
           </p>
           <p
             className="text-red-500 font-semibold hover:cursor-pointer"
-            onClick={handleClickDelete}
+            onClick={handleClickDeleteCheck}
           >
             DELETE
           </p>
         </div>
       </div>
       <div className={showDelete}>
-        <div className="flex flex-col absolute inset-0 m-auto h-[100px] w-[200px] bg-black items-center opacity-80 rounded-md pt-5">
+        <div className="flex flex-col fixed inset-0 m-auto h-[100px] w-[200px] bg-neutral-700 items-center opacity-80 rounded-md pt-5 text-foreground-reverse">
           <p className="font-extrabold text-xl">ARE YOU SURE?</p>
           <p className="mt-2">
-            <button className="border w-[75px] text-red-500">DELETE</button>
+            <Link
+              href={`/delete?commentID=${commentID}`}
+              className="inline-block border-2 w-[75px] text-red-500 font-bold text-center"
+            >
+              DELETE
+            </Link>
             <button
-              className="border w-[75px] ml-2 hover:text-sky-500"
+              className="border-2 w-[75px] ml-2 hover:text-sky-500"
               onClick={handleClickCancel}
             >
               Cancel
