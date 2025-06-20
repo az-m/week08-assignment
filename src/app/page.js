@@ -11,7 +11,7 @@ export default async function HomePage() {
   let content = post.content.slice(0, 200) + "...";
 
   return (
-    <div className="flex flex-col justify-self-center gap-2 items-center w-sm md:w-md lg:w-lg xl:w-xl mt-10 p-4 text-lg">
+    <div className="flex flex-col justify-self-center gap-2 items-center w-sm md:w-md lg:w-lg xl:w-xl mt-10 p-4 text-lg text-foreground-reverse">
       <p>{post.title}</p>
       <p className="mb-5 border-l border-r pl-4 pr-4 border-content-border">
         {content}

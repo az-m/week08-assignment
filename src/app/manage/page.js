@@ -32,7 +32,7 @@ export default async function Manage() {
             <select
               name="post"
               id="post"
-              className="bg-form-input p-1 max-w-50"
+              className="bg-form-input p-1 max-w-50 text-foreground"
               required
             >
               <option hidden>Select a post...</option>
@@ -59,7 +59,7 @@ export default async function Manage() {
             <select
               name="post"
               id="post"
-              className="bg-form-input p-1 max-w-50"
+              className="bg-form-input p-1 max-w-50 text-foreground"
               required
             >
               <option hidden>Select a post...</option>

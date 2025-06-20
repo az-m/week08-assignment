@@ -24,8 +24,8 @@ export default async function UpdatePostPage({ params }) {
   }
 
   return (
-    <div className="flex flex-col justify-self-center items-center mt-10">
-      <p className="text-2xl">{post.title}</p>
+    <div className="flex flex-col justify-self-center items-center mt-10 w-sm md:w-md lg:w-lg xl:w-xl">
+      <p className="text-2xl pl-4 pr-4">{post.title}</p>
       <form
         action={handleDelete}
         className="p-4 border-b border-content-border"
