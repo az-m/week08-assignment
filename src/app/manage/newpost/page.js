@@ -36,7 +36,11 @@ export default async function NewPostPage() {
           <label htmlFor="auth" className="text-lg">
             Are you me?
           </label>
-          <input type="password" name="auth" className="border mb-5"></input>
+          <input
+            type="password"
+            name="auth"
+            className="border mb-5 pl-1"
+          ></input>
 
           <span>
             <label htmlFor="title">Title:</label>
