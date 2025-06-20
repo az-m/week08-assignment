@@ -30,7 +30,7 @@ export default async function NewPostPage() {
     <div className="flex flex-col justify-self-center pt-2 gap-2 w-sm md:w-md lg:w-lg xl:w-xl bg-content-panel md:rounded-md mt-10">
       <form
         action={handleNewPost}
-        className=" pl-4 pr-4 pb-3 border-b border-content-border"
+        className="pl-4 pr-4 pb-3 border-b border-content-border"
       >
         <fieldset className="flex flex-col">
           <label htmlFor="auth" className="text-lg">

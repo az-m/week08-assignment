@@ -53,11 +53,11 @@ export default function CommentOptions({ postID, commentID }) {
         </div>
       </div>
       <div className={showDelete}>
-        <div className="flex flex-col fixed inset-0 m-auto h-[100px] w-[200px] bg-neutral-700 items-center opacity-80 rounded-md pt-5 text-foreground-reverse">
+        <div className="flex flex-col fixed inset-0 m-auto h-[100px] w-[200px] bg-neutral-700 items-center rounded-md pt-5 text-foreground-reverse">
           <p className="font-extrabold text-xl">ARE YOU SURE?</p>
           <p className="mt-2">
             <Link
-              href={`/delete?commentID=${commentID}`}
+              href={`/delete/${commentID}`}
               className="inline-block border-2 w-[75px] text-red-500 font-bold text-center"
             >
               DELETE
