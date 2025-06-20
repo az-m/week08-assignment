@@ -13,9 +13,8 @@ export default async function Posts({ searchParams }) {
     category = "all";
   }
   return (
-    <>
-      <h2>Posts</h2>
+    <div>
       <PostList sortOrder={sortOrder} category={category} />
-    </>
+    </div>
   );
 }

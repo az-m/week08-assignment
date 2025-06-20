@@ -32,16 +32,23 @@ export default async function PostList({ sortOrder, category }) {
   }
 
   return (
-    <div>
-      <Link href={`/posts?sort=${sortOrder}&cat=${category}`}>
-        Sort {sortOrder}
+    <div className="flex flex-col items-center mt-5">
+      <Link
+        href={`/posts?sort=${sortOrder}&cat=${category}`}
+        className="border text-center uppercase p-1 hover:text-sky-500"
+      >
+        {sortOrder}
       </Link>
-      <ul>
+      <ul className="mt-5 p-5 bg-content-panel">
         {posts.map((post) => (
-          <li key={post.id}>
-            <Link href={`/post/${post.id}`}>
-              {post.title} {post.category}
-            </Link>
+          <li
+            key={post.id}
+            className="border-b border-content-border pt-1 pb-1 md:text-lg last-of-type:border-none"
+          >
+            <Link href={`/post/${post.id}`}>{post.title}</Link>
+            <p className="text-xs md:text-sm text-right pt-2">
+              {post.category}
+            </p>
           </li>
         ))}
       </ul>
