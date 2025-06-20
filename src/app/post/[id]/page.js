@@ -1,6 +1,6 @@
 import { db } from "@/utils/dbconnection";
 import Comments from "@/components/Comments";
-import AddCommentForm from "@/components/AddCommentForm";
+import AddComment from "@/components/AddComment";
 
 export default async function Post({ params }) {
   const slug = await params;
@@ -21,7 +21,7 @@ export default async function Post({ params }) {
         <h2 className="font-bold pt-2 pl-4 pr-4 text-lg">{post.title}</h2>
         <p className="p-4">{post.content}</p>
       </div>
-      <AddCommentForm postID={post.id} />
+      <AddComment postID={post.id} />
       <Comments postID={post.id} />
     </section>
   );
