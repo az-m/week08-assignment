@@ -4,7 +4,7 @@ import { db } from "@/utils/dbconnection";
 export default async function Categories() {
   const cats = (await db.query(`SELECT * FROM categories`)).rows;
   return (
-    <div className="flex flex-col items-center mt-5">
+    <div className="flex flex-col justify-self-center mt-5 w-sm md:w-md lg:w-lg xl:w-xl">
       <ul className="mt-5 p-5 bg-content-panel">
         {cats.map((cat) => (
           <li

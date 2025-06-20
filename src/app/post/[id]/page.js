@@ -13,7 +13,7 @@ export default async function Post({ params }) {
   ).rows[0];
 
   return (
-    <section className="flex flex-col justify-self-center gap-2 max-w-xl bg-content-panel mt-10 md:rounded-md">
+    <section className="flex flex-col justify-self-center gap-2 w-sm md:w-md lg:w-lg xl:w-xl bg-content-panel mt-10 md:rounded-md">
       <div>
         <p className="p-2 border-b border-content-border opacity-80">
           {post.posted_at.toDateString()}

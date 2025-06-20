@@ -39,7 +39,7 @@ export default async function PostList({ sortOrder, category }) {
       >
         {sortOrder}
       </Link>
-      <ul className="mt-5 p-5 bg-content-panel">
+      <ul className="mt-5 p-5 bg-content-panel w-sm md:w-md lg:w-lg xl:w-xl">
         {posts.map((post) => (
           <li
             key={post.id}
