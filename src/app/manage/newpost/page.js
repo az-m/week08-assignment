@@ -21,6 +21,7 @@ export default async function NewPostPage() {
         [data.title, data.content, data.category]
       );
       revalidatePath("/");
+      revalidatePath("/manage");
     } else {
       redirect("/manage");
     }

@@ -19,6 +19,7 @@ export default async function DeletePostPage({ params }) {
     if (auth === process.env.NEXT_AUTH) {
       await db.query(`DELETE FROM posts WHERE posts.id = $1`, [slug.id]);
       revalidatePath("/");
+      revalidatePath("/manage");
     } else {
       redirect("/manage");
     }
