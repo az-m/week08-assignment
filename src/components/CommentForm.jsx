@@ -25,7 +25,10 @@ export default function CommentForm({ nameValue, contentValue }) {
         required
         className="bg-form-input rounded-sm mb-2 p-1"
       />
-      <button type="submit" className="border border-sky-500 active:bg-sky-600">
+      <button
+        type="submit"
+        className="border border-sky-500 active:bg-sky-600 hover:bg-sky-200 dark:hover:bg-sky-800"
+      >
         Submit
       </button>
     </>

@@ -19,6 +19,7 @@ export default async function NewPostPage() {
         `INSERT INTO posts (title, content, category_id) VALUES ($1, $2, $3)`,
         [data.title, data.content, data.category]
       );
+      revalidatePath("/");
     } else {
       redirect("/manage");
     }
@@ -79,7 +80,7 @@ export default async function NewPostPage() {
           </select>
           <button
             type="submit"
-            className="border border-sky-500 active:bg-sky-600"
+            className="border border-sky-500 active:bg-sky-600 hover:bg-sky-200 dark:hover:bg-sky-800"
           >
             Submit
           </button>

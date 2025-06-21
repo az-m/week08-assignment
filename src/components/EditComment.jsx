@@ -33,13 +33,18 @@ export default function EditComment({
         action={handleSaveComment}
         className="pt-3 pl-4 pr-4 pb-3 border-b border-content-border"
       >
-        <fieldset className="flex flex-col pt-5">
-          <legend className="text-sm">Update comment</legend>
+        <fieldset className="flex flex-col pt-5 border-t border-content-border">
+          <legend className="text-sm ml-5 mr-5 pl-2 pr-2">
+            Update comment
+          </legend>
           <CommentForm nameValue={nameValue} contentValue={contentValue} />
         </fieldset>
       </form>
       <p className="p-4">
-        <Link href={`/post/${postID}`} className="hover:text-sky-500">
+        <Link
+          href={`/post/${postID}`}
+          className=" text-sky-500 hover:text-sky-300 dark:text-sky-300 dark:hover:text-sky-500"
+        >
           Back to post
         </Link>
       </p>

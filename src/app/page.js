@@ -18,7 +18,10 @@ export default async function HomePage() {
       </p>
 
       <p>
-        <Link href={`/post/${post.id}`} className="hover:text-sky-500 text-xl">
+        <Link
+          href={`/post/${post.id}`}
+          className="text-sky-300 hover:text-sky-500 text-xl"
+        >
           Latest Post
         </Link>
       </p>

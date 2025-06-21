@@ -20,7 +20,10 @@ export default async function Manage() {
   return (
     <div className="flex flex-col justify-self-center">
       <div className="flex flex-col items-center pt-10 text-lg w-sm md:w-md lg:w-lg xl:w-xl gap-2 text-foreground-reverse">
-        <Link href="/manage/newpost" className="hover:text-sky-500">
+        <Link
+          href="/manage/newpost"
+          className="text-sky-300 hover:text-sky-500"
+        >
           New
         </Link>
         <p className="mt-4">Update:</p>
@@ -44,7 +47,7 @@ export default async function Manage() {
             </select>
             <button
               type="submit"
-              className="border border-sky-500 active:bg-sky-600 ml-4 p-2"
+              className="border border-sky-500 active:bg-sky-600 hover:bg-sky-800 ml-4 p-2"
             >
               Submit
             </button>
@@ -71,7 +74,7 @@ export default async function Manage() {
             </select>
             <button
               type="submit"
-              className="border border-sky-500 active:bg-sky-600 ml-4 p-2"
+              className="border border-sky-500 active:bg-sky-600 hover:bg-sky-800 ml-4 p-2"
             >
               Submit
             </button>

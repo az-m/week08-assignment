@@ -1,7 +1,8 @@
+import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
 import { db } from "@/utils/dbconnection";
 
-export default async function UpdatePostPage({ params }) {
+export default async function DeletePostPage({ params }) {
   const slug = await params;
 
   const post = (
@@ -17,6 +18,7 @@ export default async function UpdatePostPage({ params }) {
 
     if (auth === process.env.NEXT_AUTH) {
       await db.query(`DELETE FROM posts WHERE posts.id = $1`, [slug.id]);
+      revalidatePath("/");
     } else {
       redirect("/manage");
     }

@@ -11,7 +11,12 @@ export default async function Categories() {
             key={cat.id}
             className="border-b border-content-border pt-1 pb-1 md:text-lg last-of-type:border-none"
           >
-            <Link href={`/posts?cat=${cat.id}`}>{cat.name}</Link>
+            <Link
+              href={`/posts?cat=${cat.id}`}
+              className="text-sky-500 hover:text-sky-300 dark:text-sky-300 dark:hover:text-sky-500"
+            >
+              {cat.name}
+            </Link>
           </li>
         ))}
       </ul>

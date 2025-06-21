@@ -3,6 +3,7 @@ import { db } from "@/utils/dbconnection";
 
 export default async function PostList({ sortOrder, category }) {
   let posts = [];
+  let order = "a-z";
 
   if (category === "all") {
     posts = (
@@ -24,20 +25,22 @@ export default async function PostList({ sortOrder, category }) {
       return a.title.localeCompare(b.title);
     });
     sortOrder = "desc";
+    order = "a-z";
   } else if (sortOrder === "desc") {
     posts.sort((a, b) => {
       return b.title.localeCompare(a.title);
     });
     sortOrder = "asc";
+    order = "z-a";
   }
 
   return (
     <div className="flex flex-col items-center mt-5">
       <Link
         href={`/posts?sort=${sortOrder}&cat=${category}`}
-        className="border text-foreground-reverse text-center uppercase p-1 hover:text-sky-500"
+        className="border text-foreground-reverse text-center pl-2 pr-2 hover:text-sky-500"
       >
-        {sortOrder}
+        {order}
       </Link>
       <ul className="mt-5 p-5 bg-content-panel w-sm md:w-md lg:w-lg xl:w-xl md:rounded-md">
         {posts.map((post) => (
@@ -45,7 +48,12 @@ export default async function PostList({ sortOrder, category }) {
             key={post.id}
             className="border-b border-content-border pt-1 pb-1 md:text-lg last-of-type:border-none"
           >
-            <Link href={`/post/${post.id}`}>{post.title}</Link>
+            <Link
+              href={`/post/${post.id}`}
+              className="text-sky-500 hover:text-sky-300 dark:text-sky-300 dark:hover:text-sky-500"
+            >
+              {post.title}
+            </Link>
             <p className="text-xs md:text-sm text-right pt-2">
               {post.category}
             </p>
