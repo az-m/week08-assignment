@@ -11,6 +11,9 @@
   --link-hover: #0ea5e9; /*sky-500 */
   --link-reverse: #0ea5e9;
   --link-hover-reverse: #7dd3fc;
+  --button-border: #0ea5e9;
+  --button-active: #0284c7; /*sky-600*/
+  --button-hover: #bae6fd; /*sky-200*/
   color-scheme: light;
 }
 
@@ -26,6 +29,9 @@
     --link-hover: #0ea5e9;
     --link-reverse: #7dd3fc;
     --link-hover-reverse: #0ea5e9;
+    --button-border: #0ea5e9;
+    --button-active: #0284c7; /* sky-600 */
+    --button-hover: #075985; /*sky-800*/
     color-scheme: dark;
   }
 }
@@ -41,6 +47,9 @@
   --color-link-hover: var(--link-hover);
   --color-link-reverse: var(--link-reverse);
   --color-link-hover-reverse: var(--link-hover-reverse);
+  --color-button-border: var(--button-border);
+  --color-button-active: var(--button-active);
+  --color-button-hover: var(--button-hover);
 }
 
 body {
