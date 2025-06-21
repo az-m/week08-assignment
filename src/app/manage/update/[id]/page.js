@@ -1,3 +1,4 @@
+import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
 import { db } from "@/utils/dbconnection";
 
@@ -27,6 +28,7 @@ export default async function UpdatePostPage({ params }) {
         `UPDATE posts SET title = $1, content = $2, category_id = $3 WHERE id = $4`,
         [data.title, data.content, data.category, slug.id]
       );
+      revalidatePath(`/post/${slug.id}`);
     } else {
       redirect("/manage");
     }
