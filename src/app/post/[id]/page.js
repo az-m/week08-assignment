@@ -18,8 +18,10 @@ export default async function Post({ params }) {
         <p className="p-2 border-b border-content-border opacity-80">
           {post.posted_at.toDateString()}
         </p>
-        <h2 className="font-bold pt-2 pl-4 pr-4 text-lg">{post.title}</h2>
-        <p className="p-4">{post.content}</p>
+        <h2 className="font-bold pt-2 pl-4 pr-4 text-lg lg:text-xl">
+          {post.title}
+        </h2>
+        <p className="p-4 lg:text-lg">{post.content}</p>
       </div>
       <AddComment postID={post.id} />
       <Comments postID={post.id} />

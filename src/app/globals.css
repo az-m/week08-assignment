@@ -19,12 +19,12 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #242429;
+    --background: #1d1d22;
     --foreground: #ededed;
     --foreground-reverse: #ededed;
-    --content-panel: #1a1a1a;
+    --content-panel: #212127;
     --content-border: #383838;
-    --form-input: #262626;
+    --form-input: #1d1d22;
     --link: #7dd3fc;
     --link-hover: #0ea5e9;
     --link-reverse: #7dd3fc;
