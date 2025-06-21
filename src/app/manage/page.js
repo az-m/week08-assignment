@@ -22,7 +22,7 @@ export default async function Manage() {
       <div className="flex flex-col items-center pt-10 text-lg w-sm md:w-md lg:w-lg xl:w-xl gap-2 text-foreground-reverse">
         <Link
           href="/manage/newpost"
-          className="text-sky-300 hover:text-sky-500"
+          className="text-link hover:text-link-hover"
         >
           New
         </Link>

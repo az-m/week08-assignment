@@ -7,6 +7,10 @@
   --content-panel: #ffffff;
   --content-border: #dedede;
   --form-input: #f2f2f2;
+  --link: #7dd3fc; /*sky-300 */
+  --link-hover: #0ea5e9; /*sky-500 */
+  --link-reverse: #0ea5e9;
+  --link-hover-reverse: #7dd3fc;
   color-scheme: light;
 }
 
@@ -18,17 +22,25 @@
     --content-panel: #1a1a1a;
     --content-border: #383838;
     --form-input: #262626;
+    --link: #7dd3fc;
+    --link-hover: #0ea5e9;
+    --link-reverse: #7dd3fc;
+    --link-hover-reverse: #0ea5e9;
     color-scheme: dark;
   }
 }
 
-@theme {
+@theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-foreground-reverse: var(--foreground-reverse);
   --color-content-panel: var(--content-panel);
   --color-content-border: var(--content-border);
   --color-form-input: var(--form-input);
+  --color-link: var(--link);
+  --color-link-hover: var(--link-hover);
+  --color-link-reverse: var(--link-reverse);
+  --color-link-hover-reverse: var(--link-hover-reverse);
 }
 
 body {

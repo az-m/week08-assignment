@@ -43,7 +43,7 @@ export default function EditComment({
       <p className="p-4">
         <Link
           href={`/post/${postID}`}
-          className=" text-sky-500 hover:text-sky-300 dark:text-sky-300 dark:hover:text-sky-500"
+          className="text-link-reverse hover:text-link-hover-reverse"
         >
           Back to post
         </Link>

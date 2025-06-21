@@ -28,7 +28,7 @@ export default function CommentOptions({ postID, commentID }) {
     <>
       <div>
         <p
-          className="text-2xl hover:text-sky-500 hover:cursor-pointer"
+          className="text-2xl hover:text-link-hover hover:cursor-pointer"
           onClick={handleClickDisplay}
         >
           &hellip;
@@ -39,7 +39,7 @@ export default function CommentOptions({ postID, commentID }) {
           <p>
             <Link
               href={`/post/${postID}/${commentID}`}
-              className="hover:text-sky-500"
+              className="hover:text-link-hover"
             >
               UPDATE
             </Link>
@@ -63,7 +63,7 @@ export default function CommentOptions({ postID, commentID }) {
               DELETE
             </Link>
             <button
-              className="border-2 w-[75px] ml-2 hover:text-sky-500"
+              className="border-2 w-[75px] ml-2 hover:text-link-hover"
               onClick={handleClickCancel}
             >
               Cancel

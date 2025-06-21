@@ -38,7 +38,7 @@ export default async function PostList({ sortOrder, category }) {
     <div className="flex flex-col items-center mt-5">
       <Link
         href={`/posts?sort=${sortOrder}&cat=${category}`}
-        className="border text-foreground-reverse text-center pl-2 pr-2 hover:text-sky-500"
+        className="border text-foreground-reverse text-center pl-2 pr-2 hover:text-link-hover"
       >
         {order}
       </Link>
@@ -50,7 +50,7 @@ export default async function PostList({ sortOrder, category }) {
           >
             <Link
               href={`/post/${post.id}`}
-              className="text-sky-500 hover:text-sky-300 dark:text-sky-300 dark:hover:text-sky-500"
+              className="text-link-reverse hover:text-link-hover-reverse"
             >
               {post.title}
             </Link>
