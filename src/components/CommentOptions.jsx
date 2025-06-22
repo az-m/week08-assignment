@@ -35,7 +35,7 @@ export default function CommentOptions({ postID, commentID }) {
         </p>
       </div>
       <div className={showOptions}>
-        <div className="bg-neutral-700 relative -top-10 -left-10 pt-2 pb-2 pl-4 pr-4 text-foreground-reverse">
+        <div className="bg-background relative -top-10 -left-10 pt-4 pb-4 pl-6 pr-6 text-foreground-reverse rounded-sm">
           <p>
             <Link
               href={`/post/${postID}/${commentID}`}
@@ -53,7 +53,7 @@ export default function CommentOptions({ postID, commentID }) {
         </div>
       </div>
       <div className={showDelete}>
-        <div className="flex flex-col fixed inset-0 m-auto h-[100px] w-[200px] bg-neutral-700 items-center rounded-md pt-5 text-foreground-reverse">
+        <div className="flex flex-col fixed inset-0 m-auto h-[110px] w-[250px] bg-background items-center rounded-sm pt-5 text-foreground-reverse">
           <p className="font-extrabold text-xl">ARE YOU SURE?</p>
           <p className="mt-2">
             <Link

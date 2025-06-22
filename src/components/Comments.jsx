@@ -13,7 +13,7 @@ export default async function Comments({ postID }) {
     <div>
       <ul className="p-4">
         {comments.map((comment) => (
-          <li key={comment.id} className="pb-4 grid grid-cols-2">
+          <li key={comment.id} className="pb-4 grid grid-cols-[85%_15%]">
             <div className="col-start-1 col-span-1">
               <p>
                 <span className="font-semibold">{comment.name}</span>
