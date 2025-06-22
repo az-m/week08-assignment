@@ -1,36 +1,25 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Requirements completed
 
-## Getting Started
+- The posts page displays the title of all posts, with an option to sort them in ascending or descending order alphabetically.
+- The database has a posts table connected to a comments table with a foreign key.
+- Comments can be deleted from the database by clicking on the menu next to the comment.
+- The dynamic post page contains a form which saves comments for that post.
+- Users can comment on individual posts in their dynamic routes. Comments are associated with posts, which have a dynamic route (i.e. /posts/:postid) (See above)
+- When the user adds a comment, the dynamic post path is revalidated, so the user can see their comment underneath the post.
 
-First, run the development server:
+# Stretch goals completed
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- The blog admin can create, update and delete posts from the database. This is done via the 'Manage' page.
+- When the admin adds a post they are then redirected to the posts list page which is revalidated.
+- Posts have categories, and can be selected by category on the 'Categories' page
+- Users can update comments on the post page by clicking on the menu next to the comment.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+# Extra little things
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+- The HomePage displays a preview of the most recent post.
+- Line breaks in post content are respected when the content is rendered because I'm not a fan of massive blocks of text.
+- I have both client and server components, which I thought was a requirement but wasn't? I needed it that way anyway.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+# Reflections
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Are in the blog posts!
