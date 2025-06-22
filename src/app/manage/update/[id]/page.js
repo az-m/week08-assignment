@@ -61,7 +61,7 @@ export default async function UpdatePostPage({ params }) {
               defaultValue={post.title}
               placeholder="required"
               required
-              className="bg-form-input rounded-sm ml-2 p-1"
+              className="bg-form-input rounded-sm p-1 w-[100%]"
             />
           </span>
           <label htmlFor="content" className="mt-2">
