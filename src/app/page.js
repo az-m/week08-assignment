@@ -9,14 +9,18 @@ export default async function HomePage() {
   ).rows[0];
 
   let content = post.content.slice(0, 200) + "...";
+  const splitContent = content.split("<br />");
 
   return (
     <div className="flex flex-col justify-self-center gap-2 items-center w-sm md:w-md lg:w-lg xl:w-xl mt-10 p-4 text-lg text-foreground-reverse">
       <p>{post.title}</p>
-      <p className="mb-5 border-l border-r pl-4 pr-4 border-content-border">
-        {content}
-      </p>
-
+      <div className="mb-5 border-l border-r pl-4 pr-4 border-content-border">
+        {splitContent.map((para, index) => (
+          <p key={index} className="pb-2">
+            {para}
+          </p>
+        ))}
+      </div>
       <p>
         <Link
           href={`/post/${post.id}`}

@@ -12,6 +12,8 @@ export default async function Post({ params }) {
     )
   ).rows[0];
 
+  const splitContent = post.content.split("<br />");
+
   return (
     <section className="flex flex-col justify-self-center gap-2 w-sm md:w-md lg:w-lg xl:w-xl bg-content-panel mt-10 md:rounded-md">
       <div>
@@ -21,7 +23,11 @@ export default async function Post({ params }) {
         <h2 className="font-bold pt-2 pl-4 pr-4 text-lg lg:text-xl">
           {post.title}
         </h2>
-        <p className="p-4 lg:text-lg">{post.content}</p>
+        {splitContent.map((para, index) => (
+          <p key={index} className="pl-4 pr-4 pt-2 pb-2 lg:text-lg">
+            {para}
+          </p>
+        ))}
       </div>
       <AddComment postID={post.id} />
       <Comments postID={post.id} />
