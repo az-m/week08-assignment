@@ -8,8 +8,8 @@ const nunitoSans = Nunito_Sans({
 });
 
 export const metadata = {
-  title: "My Blog",
-  description: "A blog with comments for TE course",
+  title: "The Blog",
+  description: "A blog with comments function for TE course",
 };
 
 export default function RootLayout({ children }) {
