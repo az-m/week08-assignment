@@ -17,8 +17,10 @@
 # Extra little things
 
 - The HomePage displays a preview of the most recent post.
+- If you want to add/update/delete posts you'll need the password.
 - Line breaks in post content are respected when the content is rendered because I'm not a fan of massive blocks of text.
 - I have both client and server components, which I thought was a requirement but wasn't? I needed it that way anyway.
+- Light and dark mode finally!
 
 # Reflections
 
